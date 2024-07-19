@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
-import logo from 'C:/Users/JAI KUMAR D/srt_construction/src/assets/SRTLOGO.png'; // Adjust the path as necessary
+import logo from '../assets/SRTLOGO.png'; // Adjust the path as necessary
 
 const NavBar = () => {
   const [hoverStates, setHoverStates] = useState({
@@ -92,6 +92,11 @@ const NavBar = () => {
             onMouseLeave={(e) => handleMouseLeave(e, 'blog')}>
             Blog
           </NavLink>
+        </li>
+        <li>
+          <a className='quote' href="/example.pdf" download="example.pdf">
+              Get a Quote
+          </a>
         </li>
       </ul>
     </nav>
