@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import house_img from '../assets/images/img-3.jpg'
 import about_img from '../assets/images/img-9.jpg'
 import './home.css'
@@ -34,7 +35,7 @@ const Home = () => {
       </section>
       <section className='our_services'>
         <h3>Our Services</h3>
-        <div className="sercice_grid">
+        <div className="service_grid1">
           <div className="grid-1">
             <h4>New Construction</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat maxime blanditiis officia neque harum aliquam! Ducimus, doloribus neque. Omnis quaerat repellendus nisi doloribus vel accusamus ea rem hic odit!</p>
@@ -49,22 +50,25 @@ const Home = () => {
             <h4>New Construction</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat maxime blanditiis officia neque harum aliquam! Ducimus, doloribus neque. Omnis quaerat repellendus nisi doloribus vel accusamus ea rem hic odit!</p>
           </div>
+        </div>
 
-          <div className="grid-4">
+        <div className="service_grid2">
+          <div className="grid-1">
             <h4>New Construction</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat maxime blanditiis officia neque harum aliquam! Ducimus, doloribus neque. Omnis quaerat repellendus nisi doloribus vel accusamus ea rem hic odit!</p>
           </div>
 
-          <div className="grid-5">
+          <div className="grid-2">
             <h4>New Construction</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat maxime blanditiis officia neque harum aliquam! Ducimus, doloribus neque. Omnis quaerat repellendus nisi doloribus vel accusamus ea rem hic odit!</p>
           </div>
 
-          <div className="grid-6">
+          <div className="grid-3">
             <h4>New Construction</h4>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat maxime blanditiis officia neque harum aliquam! Ducimus, doloribus neque. Omnis quaerat repellendus nisi doloribus vel accusamus ea rem hic odit!</p>
           </div>
         </div>
+        <Link>Learn More<KeyboardArrowRightIcon /></Link>
       </section>
       <section className="expertise">
         <div className="experience_cards">
