@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .hero {
     height: 90vh;
-    background: rgba(25, 25, 25, 0.7) url(../assets/images/img-3.jpg) no-repeat center;
-    background-size: cover;
-    background-blend-mode: darken;
+   
+    background: linear-gradient(to bottom, rgba(200, 200, 200, 0.5), rgba(25, 25, 25, 0.7),rgba(25, 25, 25, 0.7), rgba(25, 25, 25, 0.7), rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.5)),  url('../assets/images/img-3.jpg') no-repeat center;
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-blend-mode: overlay;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
+    /*border-radius: 15px; /* Adjust the radius to make the edges smoother */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visual effect */
+    overflow: hidden; /* Ensure no content spills outside the rounded corners */
 }
 
 .hero-content {
@@ -81,5 +85,110 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.query {
+    width: 100%;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(219, 174, 95, 1),
+        rgba(219, 174, 95, 1) 20px,
+        rgba(50, 50, 50, 0.8) 10px,
+        rgba(50, 50, 50, 0.8) 40px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.query div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.query div a {
+    display: inline-block; /* Ensure the element scales correctly */
+    background-color: white;
+    color: black;
+    text-decoration: none; /* Ensure no underline */
+    padding: 12px 1rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for the scale effect */
+}
+
+.query div a:hover {
+    transform: scale(1.2);
+}
+
+.about {
+    width: 60%; /* Set the width to 60-70% */
+    max-width: 70%;
+    margin: 30px auto; /* Center the section */
+    padding: 20px;
+    background-color: #f9f9f9; /* Example background color */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add some shadow for depth */
+    animation: autoshow both;
+    animation-timeline: view(80% 5%);
+}
+
+.about h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: inline-block; /* Ensures proper width for the underline */
+}
+
+.about h3::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #333;
+    margin: 10px auto 0; /* Center the underline */
+}
+
+.info {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px; /* Add some space between the items */
+}
+
+.info p {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px;
+    color: #333;
+    text-align: justify;
+}
+
+.info img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: round the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for depth */
+}
+
+
+@keyframes autoshow{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
